@@ -17,15 +17,15 @@ This project aims to extract the urls from a website's sitemap, scrape the text 
     cd web-text-scraper
     ```
 
-2. Create a virtual environment and activate it:
+2. Install the required dependencies using Poetry:
     ```sh
-    python3 -m venv venv
-    source venv/bin/activate
+    pip install poetry
+    poetry install
     ```
 
-3. Install the required dependencies:
+3. Activate the virtual environment and run the script:
     ```sh
-    pip install -r requirements.txt
+    poetry shell
     ```
 
 ## Usage
@@ -43,11 +43,4 @@ This project aims to extract the urls from a website's sitemap, scrape the text 
 - `scraper.py`: Contains the `Scraper` class for extracting and cleaning text from URLs.
 - `main.py`: Main script to orchestrate the scraping process and save the extracted text to files.
 
-## Example
-
-```python
-if __name__ == "__main__":
-    sitemap_url = "https://10pearls.com/sitemap.xml"
-    process_sitemap(sitemap_url)
-```
 
